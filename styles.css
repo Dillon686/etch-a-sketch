@@ -1,0 +1,29 @@
+body {
+    background-color: rgb(46, 12, 7);
+    display: flex;
+    justify-content: center;
+}
+
+#main-container {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: 630px;
+}
+
+#title-div {
+    height: 10%;
+    font-size: 30pt;
+    color: white;
+}
+
+#game {
+    background-color: white;
+    height: 80%;
+}
+
+#toolbar {
+    height: 10%;
+    display: flex;
+    align-items: center;
+}
