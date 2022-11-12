@@ -7,23 +7,45 @@ body {
 #main-container {
     display: flex;
     flex-direction: column;
-    width: 40%;
+    width: fit-content;
     height: 630px;
 }
 
 #title-div {
-    height: 10%;
+    flex: 1;
     font-size: 30pt;
     color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 #game {
     background-color: white;
-    height: 80%;
+    flex: 5;
+    display: flex;
+    width: 450px;
+    flex-direction: column;
+}
+
+.game-row{
+    flex: auto;
+    flex-direction: row;
+    display: flex;
+}
+
+.game-cell{
+    flex: 1;
+    border: rgb(46, 12, 7) solid .5px;
+    background-color: rgb(255, 255, 255);
+}
+
+.game-cell:hover{
+    background-color: black;
 }
 
 #toolbar {
-    height: 10%;
+    flex: 1;
     display: flex;
     align-items: center;
 }
