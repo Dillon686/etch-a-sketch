@@ -4,6 +4,15 @@ body {
     justify-content: center;
 }
 
+label {
+    color: white;
+    font-weight: bold;
+}
+
+#reset {
+    margin-left: 5px;
+}
+
 #main-container {
     display: flex;
     flex-direction: column;
@@ -36,11 +45,11 @@ body {
 
 .game-cell{
     flex: 1;
-    border: rgb(46, 12, 7) solid .5px;
+    /*border: rgb(46, 12, 7) solid .5px;*/
     background-color: rgb(255, 255, 255);
 }
 
-.game-cell:hover{
+.change-black{
     background-color: black;
 }
 

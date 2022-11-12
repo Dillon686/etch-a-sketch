@@ -1,6 +1,14 @@
 const game = document.getElementById("game");
+const resetButton = document.getElementById("reset");
+const updateButton = document.getElementById("update");
 
-function generateGrid(sideDimension = 16){
+updateButton.addEventListener("click", () => {
+    game.innerHTML = ""
+    const sideDimension = prompt("Please enter a dimension (ex. enter 16 for a 16x16 grid):")
+    generateGrid(sideDimension);
+})
+
+function generateGrid(sideDimension = 64){
     for(let i = 0; i < sideDimension; i++){
         const row = document.createElement("div");
         row.classList.add("game-row");
@@ -9,9 +17,16 @@ function generateGrid(sideDimension = 16){
             const cell = document.createElement("div");
             cell.classList.add("game-cell")
             row.appendChild(cell);
+
+            cell.addEventListener("mouseover", () => {
+                cell.classList.add("change-black");
+            })
+
+            resetButton.addEventListener("click", () => {
+                cell.classList.remove("change-black");
+            })
         }
     }
 }
-
 
 generateGrid();
