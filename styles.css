@@ -1,0 +1,26 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(209, 209, 134);
+}
+
+#game-container {
+    background-color: lightgray;
+    width: 700px;
+    height: 700px;
+    border: 10px solid brown;
+    display: flex;
+    flex-direction: column;
+}
+
+#game-container div {
+    border: 1px black solid;
+    flex: 1;
+    display: flex;
+}
+
+#game-container div div {
+    flex: 1;
+}
