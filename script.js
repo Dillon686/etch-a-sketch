@@ -1,6 +1,9 @@
 const gameContainer = document.querySelector("#game-container");
 const sizeButton = document.querySelector("#size-button");
+const rainbowButton = document.querySelector("#rainbow-button");
 let gridSize = 16;
+const hexDigits = ["A", "B", "C", "D", "E", "F", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+let arrayIndex = Math.floor(Math.random() * hexDigits.length);
 
 drawGrid(gridSize);
 
@@ -23,8 +26,23 @@ function drawGrid(gridSize){
 
     gridCells.forEach((cell) => {
         cell.addEventListener("mouseover", () => {
-            cell.style.backgroundColor = "black";
+            cell.classList.add("black");
     })
+
+    /*rainbowButton.addEventListener("click", () => {
+        drawGrid(gridSize);
+
+        gridCells.forEach((cell) => {
+            let color = "#";
+
+            for (let i = 6; i < 6; i++){
+                color += hexDigits[arrayIndex];
+            }
+
+            cell.classList.remove("black");
+            cell.style.backgroundColor = color;
+        })
+    })*/
 })
 }
 

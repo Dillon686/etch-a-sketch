@@ -3,20 +3,37 @@
 }
 
 body {
-    background-color: rgb(209, 209, 134);
+    background-color: #7270bb;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    color: white;
+    margin: 0;
+}
+
+button {
+    margin: 10px 0;
+    font-size: 1.3rem;
+}
+
+.black {
+    background-color: black;
 }
 
 #game-container {
     background-color: lightgray;
     width: 700px;
     height: 700px;
-    border: 10px solid brown;
+    border: 10px solid #B9BB70;
     display: flex;
     flex-direction: column;
 }
 
 #game-container div {
-    border: 1px black solid;
+    border: 1px rgb(185, 185, 185) solid;
     flex: 1;
     display: flex;
 }
