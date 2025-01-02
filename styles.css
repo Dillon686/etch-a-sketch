@@ -37,3 +37,9 @@ button {
 #game-container div div {
     flex: 1;
 }
+
+
+#navbar{
+    display: flex;
+    gap: 20px;
+}

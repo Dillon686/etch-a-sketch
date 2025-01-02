@@ -1,6 +1,7 @@
 const gameContainer = document.querySelector("#game-container");
 const sizeButton = document.querySelector("#size-button");
 const rainbowButton = document.querySelector("#rainbow-button");
+const clearButton = document.querySelector("#clear-button");
 let gridSize = 16;
 const hexDigits = ["A", "B", "C", "D", "E", "F", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 
@@ -43,8 +44,17 @@ function drawGrid(gridSize){
 
     rainbowButton.addEventListener("click", () => {
         gridCells.forEach((cell) => {
-            cell.classList.remove("black");
-            cell.classList.add("rainbow");
+            if (cell.classList.contains("rainbow")){
+                cell.classList.remove("rainbow");
+            }else{
+                cell.classList.add("rainbow");
+            }
+        })
+    })
+
+    clearButton.addEventListener("click", () => {
+        gridCells.forEach((cell) => {
+            cell.style.backgroundColor = "";
         })
     })
 }
