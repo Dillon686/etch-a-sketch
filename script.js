@@ -62,8 +62,12 @@ function drawGrid(gridSize){
 sizeButton.addEventListener("click", () => {
     gridSize = prompt("Please select a grid size (value must be between 2-100):")
 
-    while (gridSize <= 1 || gridSize > 100){
-        gridSize = prompt("Please select a grid size (value must be between 2-100):")
+    if (gridSize === null){
+        return;
+    }else{
+        while (gridSize <= 1 || gridSize > 100){
+            gridSize = prompt("Please select a grid size (value must be between 2-100):")
+        }
     }
 
     drawGrid(gridSize);
