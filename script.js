@@ -3,7 +3,6 @@ const sizeButton = document.querySelector("#size-button");
 const rainbowButton = document.querySelector("#rainbow-button");
 let gridSize = 16;
 const hexDigits = ["A", "B", "C", "D", "E", "F", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
-let arrayIndex = Math.floor(Math.random() * hexDigits.length);
 
 drawGrid(gridSize);
 
@@ -26,24 +25,28 @@ function drawGrid(gridSize){
 
     gridCells.forEach((cell) => {
         cell.addEventListener("mouseover", () => {
-            cell.classList.add("black");
+            if (cell.classList.contains("rainbow")){
+                let color = "#";
+
+                for (let i = 0; i < 6; i++){
+                    let arrayIndex = Math.floor(Math.random() * hexDigits.length);
+                    color += hexDigits[arrayIndex];
+                }
+                console.log(color);
+                cell.style.backgroundColor = color;
+            }else {
+                cell.style.backgroundColor = "black";
+            }
+        })
+        
     })
 
-    /*rainbowButton.addEventListener("click", () => {
-        drawGrid(gridSize);
-
+    rainbowButton.addEventListener("click", () => {
         gridCells.forEach((cell) => {
-            let color = "#";
-
-            for (let i = 6; i < 6; i++){
-                color += hexDigits[arrayIndex];
-            }
-
             cell.classList.remove("black");
-            cell.style.backgroundColor = color;
+            cell.classList.add("rainbow");
         })
-    })*/
-})
+    })
 }
 
 sizeButton.addEventListener("click", () => {

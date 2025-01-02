@@ -19,10 +19,6 @@ button {
     font-size: 1.3rem;
 }
 
-.black {
-    background-color: black;
-}
-
 #game-container {
     background-color: lightgray;
     width: 700px;
